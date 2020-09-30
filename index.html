@@ -12,12 +12,24 @@
         <div>There are <span style="font-size:150%">lots</span> of types of drinks out there and 
         everyone has their own way to quench their thirst.</div>
         <br/>
-        <div>Personally, beer is my favourite drink.</div>
+        <div>Personally, beer is my favourite drink. Let's have a cheers to that!</div>
         <br/>
-        <img src="images\beer.jpg" alt="A glass filled with beer." 
-        width="462" height="259.2"/>
+
+        <img src="images/beer.jpg" alt="Where is my beer?" 
+        width="462" height="259.2" id="picture" onmouseover="one()" onmouseout="two()" />
         <br/><br/>
 
+        <!--Change picture on index page by hovering over it with the mouse-->
+        <script>
+            function one() {
+                document.getElementById("picture").src = "images/cheers.jpg";
+            }
+
+            function two() {
+                document.getElementById("picture").src = "images/beer.jpg";
+            }
+        </script>
+        
         <div>My top 3 beer brands are:</div>
         <ol>
             <li>Belgian Moon</li>
@@ -28,6 +40,5 @@
         <div>Click <a href="forms.html" target=" _blank">here</a> to tell me about what
         you like to drink!</div>
             
-
      </body>
 </html>

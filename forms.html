@@ -12,7 +12,10 @@
 
         <form>
             <label for="name">Name:</label><br/>
-            <input type="text" id="name" name="name"><br/><br/>
+            <input id="name" name="name"><br/><br/>
+
+            <label for="age">Age:</label><br/>
+            <input id="age" name="age"><br/><br/>
             
             <div>Gender:</div>
             <input type="radio" id="male" name="gender" value="male">
@@ -32,7 +35,45 @@
                 <option value="water">Water</option>
             </select>
         </form>
+        </br>
 
+        <button type="button"
+        onclick="AgeCheck();NameCheck()">Submit</button>
 
+        <!--Script to check if the entered age is appropriate and if a name was entered-->
+        <p id="check"></p>
+        <p id="check2"></p>
+
+        <script>
+            function AgeCheck() {
+                var x, text;
+                
+                //Get the value of the age
+                x = document.getElementById("age").value;
+
+                //Check if x is greater or equal than 18 or not a number
+                if (x < 18 || isNaN(x)) {
+                    text = "You must be over 18 to submit this form.";
+                } else {
+                    text = "Age OK"
+                }
+                document.getElementById("check").innerHTML = text;
+            }
+
+            function NameCheck() {
+                var y, text2;
+
+                //Get the name text
+                y = document.getElementById("name").value;
+
+                //Check is anything was entered
+                if (!y) {
+                    text2 = "Please enter your name.";
+                } else {
+                    text2 = "Name OK";
+                }
+                document.getElementById("check2").innerHTML = text2;
+            }
+        </script>
     </body>
 </html>
