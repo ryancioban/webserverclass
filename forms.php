@@ -19,16 +19,16 @@
             Age: <input type="text" id="age" name="age"><br/><br/>
             
             <div>Gender:</div>
-            Male <input type="radio" id="gender" name="gender" value="male">
-            Female <input type="radio" id="gender" name="gender" value="female">
-            Other <input type="radio" id="gender" name="gender" value="other">
+            <input type="radio" id="gender" name="gender" value="Male"> Male <br/>
+            <input type="radio" id="gender" name="gender" value="Female"> Female <br/>
+            <input type="radio" id="gender" name="gender" value="Other"> Other <br/>
             <br/>
 
             Preferred drink: <select id="drink" name="drink">
-                <option value="alcohol">Alcoholic</option>
-                <option value="no-alcohol">Non-Alcoholic</option>
-                <option value="water">Water</option>
-            </select>
+                <option value="Alcohol">Alcoholic</option>
+                <option value="Non-Alcoholic">Non-Alcoholic</option>
+                <option value="Water">Water</option>
+            </select><br/>
             <input type="submit">
         </form>
         </br>
