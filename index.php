@@ -2,7 +2,10 @@
 <html>
      <head>
         <title>Drinking Time</title>
+        <!--Change picture on index page by hovering over it with the mouse-->
+        <script src="swap.js"></script>
     </head>
+    
     <body>
 
         <h1>Everybody Drink!</h1>
@@ -18,9 +21,6 @@
         <img src="images/beer.jpg" alt="Where is my beer?" 
         width="462" height="259.2" id="picture" onmouseover="one()" onmouseout="two()" />
         <br/><br/>
-
-        <!--Change picture on index page by hovering over it with the mouse-->
-        <script src="swap.js"></script>
         
         <div>My top 3 beer brands are:</div>
         <ol>
@@ -29,7 +29,7 @@
             <li>Heineken</li>
         </ol>
 
-        <div>Click <a href="forms.html" target=" _blank">here</a> to tell me about what
+        <div>Click <a href="forms.php" target=" _blank">here</a> to tell me about what
         you like to drink!</div>
             
      </body>
