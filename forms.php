@@ -39,6 +39,10 @@
                 if (!ctype_digit($age)) {
                     $ageErr = "Only digits are allowed.";
                 }
+                //check if age is over 18
+                if ($age < 18) {
+                    $ageErr = "You must be over 18 to drink!";
+                }
             }
 
             if (empty($_POST["gender"])) {
