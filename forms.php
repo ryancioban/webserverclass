@@ -66,7 +66,7 @@
 
         <!--Form elements-->
         <p><span class="error">* required field</span></p>
-        <form method="post" action="submitted.php">
+        <form method="post" action="submitted.php" target=" _blank">
             Name: <input type="text" id="name" name="name">
             <span class="error">* <?= $nameErr;?></span> <br/><br/>
 
