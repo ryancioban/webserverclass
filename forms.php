@@ -25,12 +25,20 @@
                 $nameErr = "Name is required.";
             } else {
                 $name = test_input($_POST["name"]);
+                //check for letters and whitespace
+                if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
+                    $nameErr = "Only letters and white space are allowed.";
+                }
             }
             
             if (empty($_POST["age"])) {
                 $ageErr = "Age is required.";
             } else {
                 $age = test_input($_POST["age"]);
+                //check for numbers only
+                if (!ctype_digit($age)) {
+                    $ageErr = "Only digits are allowed.";
+                }
             }
 
             if (empty($_POST["gender"])) {
@@ -58,10 +66,10 @@
             <span class="error">* <?= $ageErr;?></span> <br/><br/>
             
             <div>Gender:</div>
-            <span class="error">* <?= $genderErr;?></span>
             <input type="radio" id="gender" name="gender" value="Male"> Male <br/>
             <input type="radio" id="gender" name="gender" value="Female"> Female <br/>
-            <input type="radio" id="gender" name="gender" value="n/a"> Other <br/><br/>
+            <input type="radio" id="gender" name="gender" value="n/a"> Other <br/>
+            <span class="error">* <?= $genderErr;?></span> <br/><br/>
 
             Preferred drink: <select id="drink" name="drink">
                 <option value="Alcohol">Alcoholic</option>
