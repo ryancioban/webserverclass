@@ -40,8 +40,12 @@
                     $ageErr = "Only digits are allowed.";
                 }
                 //check if age is over 18
-                if ($age < 18) {
+                else if ($age < 18) {
                     $ageErr = "You must be over 18 to drink!";
+                }
+                //check if entered age is too high
+                else if ($age > 110) {
+                    $ageErr = "Damn you're old.";
                 }
             }
 
