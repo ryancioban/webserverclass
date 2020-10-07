@@ -84,18 +84,12 @@
             </select><br/><br/>
             <input type="submit" name="submit" value="Submit">
         </form>
-        </br>
+        </br></br>
 
         <!--Echo entered values-->
-        <?php
-            echo "Your entry:";
-            echo $name;
-            echo "<br/>";
-            echo $age;
-            echo "<br/";
-            echo $gender;
-            echo "<br/>";
-            echo $drink;
-        ?>
+        Welcome <?php echo $_POST["name"]; ?>!<br/>
+        Your age is: <?php echo $_POST["age"]; ?><br/>
+        You are: <?php echo $_POST["gender"]; ?><br/>
+        Your preferred drink is: <?php echo $_POST["drink"]; ?><br/>
     </body>
 </html>
