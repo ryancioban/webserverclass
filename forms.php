@@ -4,6 +4,7 @@
         <title>Drinks Entry</title>
         <!--Script to check if the entered age is appropriate and if a name was entered-->
         <script src="checks.js"></script>
+        <style> .error {color: #FF0000;} </style>
     </head>
     
     <body>
@@ -49,7 +50,7 @@
 
         <!--Form elements-->
         <p><span class="error">* required field</span></p>
-        <form action="submitted.php" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             Name: <input type="text" id="name" name="name">
             <span class="error">* <?= $nameErr;?></span> <br/><br/>
 
@@ -57,10 +58,10 @@
             <span class="error">* <?= $ageErr;?></span> <br/><br/>
             
             <div>Gender:</div>
+            <span class="error">* <?= $genderErr;?></span>
             <input type="radio" id="gender" name="gender" value="Male"> Male <br/>
             <input type="radio" id="gender" name="gender" value="Female"> Female <br/>
-            <input type="radio" id="gender" name="gender" value="n/a"> Other 
-            <span class="error">* <?= $genderErr;?></span> <br/><br/>
+            <input type="radio" id="gender" name="gender" value="n/a"> Other <br/><br/>
 
             Preferred drink: <select id="drink" name="drink">
                 <option value="Alcohol">Alcoholic</option>
