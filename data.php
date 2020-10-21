@@ -27,13 +27,13 @@
 
             //Check for error
             if (mysqli_query($conn, $sql)) {
-                echo "New record created successfully <br>";
+                echo "New record created successfully. <br>";
             } else {
                 echo "Error: " .$sql . "<br>" . mysqli_error($conn);
             }
 
             //Select data and query
-            $sql = "SELECT Entryid, Name, Age, Gender, Drinktype FROM drinkers";
+            $sql = "SELECT * FROM drinkers";
             $result = mysqli_query($conn, $sql);
 
             if (mysqli_num_rows($result) > 0) {
