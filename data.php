@@ -9,15 +9,30 @@
             $password = "password";
             $dbname = "pistore";
 
+            $EnterName = $_POST["name"];
+            $EnterAge = $_POST["age"];
+            $EnterGender = $_POST["gender"];
+            $EnterDrink = $_POST["drink"];
+
             //Create connection
             $conn = mysqli_connect($servername, $username, $password, $dbname);
 
             //Check connection
             if (!$conn) {
-                die("Connection failed: " . mnysqli_connect_error());
+                die("Connection failed: " . mysqli_connect_error());
             }
             
-            //Select data
+            //Insert data from form
+            $sql = "INSERT INTO drinkers (Name, Age, Gender, Drinktype) VALUES ($EnterName, $EnterAge, $EnterGender, $EnterDrink)";
+
+            //Check for error
+            if (mysqli_query($conn, $sql)) {
+                echo "New record created successfully";
+            } else {
+                echo "Error: " .$sql . "<br>" . mysqli_error($conn);
+            }
+
+            //Select data and query
             $sql = "SELECT Entryid, Name, Age, Gender, Drinktype FROM drinkers";
             $result = mysqli_query($conn, $sql);
 
