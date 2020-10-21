@@ -60,11 +60,12 @@
                 $data = htmlspecialchars($data);
                 return $data;
             }
+            //<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>
         ?>
 
         <!--Form elements-->
         <p><span class="error">* required field</span></p>
-        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        <form method="post" action="submitted.php">
             Name: <input type="text" id="name" name="name">
             <span class="error">* <?= $nameErr;?></span> <br/><br/>
 
