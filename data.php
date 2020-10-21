@@ -23,7 +23,7 @@
             }
             
             //Insert data from form
-            $sql = "INSERT INTO drinkers (Name, Age, Gender, Drinktype) VALUES ($EnterName, $EnterAge, $EnterGender, $EnterDrink)";
+            $sql = "INSERT INTO drinkers (Name, Age, Gender, Drinktype) VALUES ('$EnterName', $EnterAge, '$EnterGender', '$EnterDrink')";
 
             //Check for error
             if (mysqli_query($conn, $sql)) {
