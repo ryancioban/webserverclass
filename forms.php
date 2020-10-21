@@ -83,7 +83,7 @@
                 <option value="Non-Alcoholic">Non-Alcoholic</option>
                 <option value="Water">Water</option>
             </select><br/><br/>
-            <input type="submit" name="submit" value="Submit">
+            <input type="submit" name="submit" value="Submit" target=" _blank">
         </form>
         </br></br>
 
