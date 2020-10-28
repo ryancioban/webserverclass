@@ -30,9 +30,8 @@
         <?php    
             while($row = mysqli_fetch_assoc($result)) {
                 $ProgName = $row["ProgramName"];
-                //echo $ProgName;
-                </br>
         ?>
+        <br>
         <input type="radio" name="ProgName" value="<?php echo $ProgName; ?>">
         <?php
         echo $ProgName; //This actually displays the program name
