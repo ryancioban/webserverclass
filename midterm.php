@@ -61,5 +61,6 @@
             document.getElementById("YourName").innerHTML = "text";
         }
         </script>
+        <?php echo $name ?>
     </body>
 </html>
