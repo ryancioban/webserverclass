@@ -18,7 +18,7 @@
             }
 
             //Select data from table and query
-            $sql = "SELECT ProgramName FROM Programs;"
+            $sql = "SELECT ProgramName FROM Programs";
             $result = mysqli_query($conn, $sql);
 
             if (mysqli_num_rows($result) > 0) {
