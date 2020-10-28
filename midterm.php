@@ -47,8 +47,9 @@
         <?php mysqli_close($conn);?>
 
         <!--Prompt for name-->
-        <div id="YourName">Your name is:</div> 
         <br>
+        <div id="YourName">Your name is:</div> 
+        </br>
 
         <form>
             <input type="text" id="name" name="name">
@@ -57,7 +58,7 @@
 
         <script>
         function FillName("name") {
-            document.getElementById("YourName") = "name";
+            document.getElementById("YourName").innerHTML = "name";
         }
         </script>
     </body>
