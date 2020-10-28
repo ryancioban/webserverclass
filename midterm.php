@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Programs</title>
+    </head>
+
     <body>
         <?php
 
@@ -25,7 +29,7 @@
 
         ?>
 
-        <p> Choose a program: </br>
+        <h1> Choose a program: </h1> </br>
         
         <?php    
             while($row = mysqli_fetch_assoc($result)) {
@@ -38,5 +42,6 @@
         } ?>
         </br>
         <?php mysqli_close($conn);?>
+
     </body>
 </html>
