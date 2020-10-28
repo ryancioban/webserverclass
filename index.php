@@ -29,8 +29,9 @@
             <li>Heineken</li>
         </ol>
 
-        <div>Click <a href="midterm.php" target=" _blank">here</a> to tell me about what
+        <div>Click <a href="forms.php" target=" _blank">here</a> to tell me about what
         you like to drink!</div>
             
+        <div>Click <a href="midterm.php" target=" _blank">here</a> to test midterm.</div>
      </body>
 </html>
