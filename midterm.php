@@ -5,8 +5,8 @@
 
             //Define variables
             $servername = "localhost";
-            $username = "ryan";
-            $password = "password";
+            $username = "root";
+            $password = "EagleStrike1q";
             $dbname = "pistore";
 
             //Create connection
