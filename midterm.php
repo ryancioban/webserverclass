@@ -58,9 +58,8 @@
 
         <script>
         function FillName("text") {
-            document.getElementById("YourName").innerHTML = "text";
+            document.getElementById("name").innerHTML = "text";
         }
         </script>
-        <?php echo $name ?>
     </body>
 </html>
