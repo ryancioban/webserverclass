@@ -5,6 +5,7 @@
     </head>
 
     <body>
+        <!--Connect to database-->
         <?php
 
             //Define variables
@@ -29,6 +30,7 @@
 
         ?>
 
+        <!-- Displayed fields -->
         <h1> Choose a program: </h1> </br>
         
         <?php    
@@ -38,10 +40,26 @@
         <br>
         <input type="radio" name="ProgName" value="<?php echo $ProgName; ?>">
         <?php
-        echo $ProgName; //This actually displays the program name
+            echo $ProgName; //This actually displays the program name
         } ?>
         </br>
+
         <?php mysqli_close($conn);?>
 
+        <!--Prompt for name-->
+        <div>Your name is:</div> 
+        <div id="YourName"></div>
+        <br>
+
+        <form>
+            <input type="text" id="name" name="name">
+            <button onclick="FillName()">Submit</button>
+        </form>
+
+        <script>
+        function FillName("name") {
+            document.getElementById("YourName") = "name";
+        }
+        </script>
     </body>
 </html>
