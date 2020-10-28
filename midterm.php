@@ -26,15 +26,16 @@
         ?>
 
         <p> Choose a program: </br>
-
+        
         <?php    
             while($row = mysqli_fetch_assoc($result)) {
                 $ProgName = $row["ProgramName"];
                 //echo $ProgName;
+                </br>
         ?>
         <input type="radio" name="ProgName" value="<?php echo $ProgName; ?>">
         <?php
-        echo $ProgName; 
+        echo $ProgName; //This actually displays the program name
         } ?>
         </br>
         <?php mysqli_close($conn);?>
