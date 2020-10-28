@@ -48,7 +48,7 @@
 
         <!--Prompt for name-->
         <br>
-        <div id="YourName">Your name is:</div> 
+        <div id="name"></div> 
         </br>
 
         <form>
@@ -57,8 +57,8 @@
         </form>
 
         <script>
-        function FillName("name") {
-            document.getElementById("YourName").innerHTML = "name";
+        function FillName("text") {
+            document.getElementById("YourName").innerHTML = "text";
         }
         </script>
     </body>
