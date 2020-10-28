@@ -47,8 +47,7 @@
         <?php mysqli_close($conn);?>
 
         <!--Prompt for name-->
-        <div>Your name is:</div> 
-        <div id="YourName"></div>
+        <div id="YourName">Your name is:</div> 
         <br>
 
         <form>
