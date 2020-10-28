@@ -32,7 +32,7 @@
                 $ProgName = $row["ProgramName"];
                 
         ?>
-        <input type="radio" name="ProgName" value="<?php echo $ProgName; ?>">
+        <input type="radio" name="ProgName" value="<?php echo $ProgName; ?>"> </br>
         <?php } ?>
 
         <?php mysqli_close($conn);?>
