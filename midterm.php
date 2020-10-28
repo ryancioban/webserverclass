@@ -9,6 +9,8 @@
             $password = "password";
             $dbname = "pistore";
 
+            $ProgName = "";
+
             //Create connection
             $conn = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -21,16 +23,18 @@
             $sql = "SELECT ProgramName FROM Programs";
             $result = mysqli_query($conn, $sql);
 
-            if (mysqli_num_rows($result) > 0) {
-                //output data of each row
-                while($row = mysqli_fetch_assoc($result)) {
-                    echo "Name:" . $row["ProgramName"].  "<br>";
-                }
-            } else {
-                echo "0 results";
-            }
-
-            mysqli_close($conn);
         ?>
+
+        <p> Choose a program:
+
+        <?php    
+            while($row = mysqli_fetch_assoc($result)) {
+                $ProgName = $row["ProgramName"];
+                
+        ?>
+        <input type="radio" name="ProgName" value="<?php echo $ProgName; ?>">
+        <?php } ?>
+
+        <?php mysqli_close($conn);?>
     </body>
 </html>
