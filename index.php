@@ -42,18 +42,18 @@
 
         function toggler() {
             $output = `echo "17" > /sys/class/gpio/export`;
-            echo "<div>$output</div>";
+            //echo "<div>$output</div>";
 
             $output = `cat /sys/class/gpio/gpio0/value`;
-            echo "<div>$output</div>";
+            //echo "<div>$output</div>";
 
-            if($output == 0){
+            if(($output = `cat /sys/class/gpio/gpio0/value`) == 0){
             $output= `gpio write gpio.0 1`;
             echo "<div>$output</div>";
             echo "<br>LED should toggle ON!<br>";
             }
             
-            else if ($output == 1){
+            else {
             $output= `gpio write gpio.0 0`;
             echo "<div>$output</div>";
             echo "<br>LED should toggle OFF!<br>";
