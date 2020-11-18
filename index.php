@@ -40,7 +40,7 @@
 
         <?php
         //define and set flag variable
-        $flag = 0;
+        //$flag = 0;
 
         function toggler() {
             if($flag == 0){
@@ -48,6 +48,7 @@
             echo "<div>$output</div>";
             echo "<br>LED should toggle ON!<br>";
             $flag = 1;
+            echo "<div>"$flag"</div>";
             }
 
             else {
@@ -55,6 +56,7 @@
             echo "<div>$output</div>";
             echo "<br>LED should toggle OFF!<br>";
             $flag = 0;
+            echo "<div>"$flag"</div>";
             }
 
         }
