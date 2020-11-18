@@ -34,38 +34,6 @@
             
         <div>Click <a href="midterm.php" target=" _blank">here</a> to test midterm.</div>
 
-        <form method="post">
-            <input type="submit" name="test" id="test" value="Toggle LED"/><br/>
-        </form>
-
-        <?php
-
-        function toggler() {
-            $output = `gpio read 0`;
-            //echo "<div>$output</div>";
-
-            //$output = `cat /sys/class/gpio/gpio17/value`;
-            //echo "<div>$output</div>";
-
-            if (($output = `gpio read 0`) == 0){
-            $output= `gpio write gpio.0 1`;
-            echo "<div>$output</div>";
-            echo "<br>LED should toggle ON!<br>";
-            }
-            
-            else if (($output = `gpio read 0`) == 1){
-            $output= `gpio write gpio.0 0`;
-            echo "<div>$output</div>";
-            echo "<br>LED should toggle OFF!<br>";
-            }
-
-        }
-
-        if(array_key_exists('test',$_POST)){
-            toggler();
-        }
-        
-        ?>
-
+ 
      </body>
 </html>
