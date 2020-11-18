@@ -59,7 +59,7 @@
                 $flag = 1;
         }
 
-        if(array_key_exists('test',$_POST) && $flag == 1){
+        else if(array_key_exists('test',$_POST) && $flag == 1){
             toggleOFF();
             $flag = 0;
         }
