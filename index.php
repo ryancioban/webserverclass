@@ -47,16 +47,12 @@
             $output= `gpio write gpio.0 1`;
             echo "<div>$output</div>";
             echo "<br>LED should toggle ON!<br>";
-            $flag = 1;
-            //echo "<div>"$flag"</div>";
             }
 
             else if ($flag == 1){
             $output= `gpio write gpio.0 0`;
             echo "<div>$output</div>";
             echo "<br>LED should toggle OFF!<br>";
-            $flag = 0;
-            //echo "<div>"$flag"</div>";
             }
 
         }
@@ -67,15 +63,16 @@
             echo "<br>LED should toggle OFF!<br>";
         }*/
 
-        if(array_key_exists('test',$_POST)){
-                toggler();
+        if(array_key_exists('test',$_POST) && $flag == 0){
+            toggler();
+            $flag = 1;
         }
 
-        /*else if(array_key_exists('test',$_POST) && $flag == 1){
+        else if(array_key_exists('test',$_POST) && $flag == 1){
             toggleOFF();
             $flag = 0;
         }
-        */
+        
         ?>
 
      </body>
