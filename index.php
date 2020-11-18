@@ -41,8 +41,7 @@
         <?php
 
         function toggler() {
-            //if($flag == 0)
-            $output = `echo "0" > /sys/class/gpio/export`;
+            $output = `echo "17" > /sys/class/gpio/export`;
             echo "<div>$output</div>";
 
             $output = `cat /sys/class/gpio/gpio0/value`;
