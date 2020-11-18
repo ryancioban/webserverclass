@@ -41,19 +41,19 @@
         <?php
 
         function toggler() {
-            $output = `echo "17" > /sys/class/gpio/export`;
+            $output = `gpio read 0`;
             //echo "<div>$output</div>";
 
-            $output = `cat /sys/class/gpio/gpio17/value`;
+            //$output = `cat /sys/class/gpio/gpio17/value`;
             //echo "<div>$output</div>";
 
-            if (($output = `cat /sys/class/gpio/gpio17/value`) == 0){
+            if (($output = `gpio read 0`) == 0){
             $output= `gpio write gpio.0 1`;
             echo "<div>$output</div>";
             echo "<br>LED should toggle ON!<br>";
             }
             
-            else if (($output = `cat /sys/class/gpio/gpio17/value`) == 1){
+            else if (($output = `gpio read0`) == 1){
             $output= `gpio write gpio.0 0`;
             echo "<div>$output</div>";
             echo "<br>LED should toggle OFF!<br>";
