@@ -37,7 +37,9 @@
         <button type="button" onclick="alert()">Test here!</button>
 
         <?php
-        echo "Test works!<br>";
+        function alert() {
+        echo "<br>Test works!<br>";
+        }
         ?>
 
      </body>
