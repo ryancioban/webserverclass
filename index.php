@@ -44,7 +44,7 @@
 
         function toggler() {
             if($flag == 0){
-            $output= `gpio write gpio.0 1`;
+            $output= `gpio write gpio.0 0`;
             echo "<div>$output</div>";
             echo "<br>LED should toggle ON!<br>";
             $flag = 1;
