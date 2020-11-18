@@ -53,7 +53,7 @@
             echo "<br>LED should toggle ON!<br>";
             }
             
-            else if (($output = `gpio read0`) == 1){
+            else if (($output = `gpio read 0`) == 1){
             $output= `gpio write gpio.0 0`;
             echo "<div>$output</div>";
             echo "<br>LED should toggle OFF!<br>";
