@@ -34,11 +34,16 @@
             
         <div>Click <a href="midterm.php" target=" _blank">here</a> to test midterm.</div>
 
-        <button type="button" onclick="displayed()">Test here!</button>
+        <form method="post">
+            <input type="submit" name="test" id="test" value="RUN"/><br/>
+        </form>
 
         <?php
         function displayed() {
         echo "<br>Test works!<br>";
+        }
+        if(array_key_exists('test',$_POST)){
+            displayed();
         }
         ?>
 
