@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
     $page = $_SERVER['PHP_SELF'];
-    $sec = "1000";
+    $sec = "3";
 ?>
 <html>
      <head>
@@ -47,7 +47,7 @@
 
         <?php
             function toggler() {
-                //Read value of gpio pin
+                //Read value of gpio.0 pin
                 $output = `gpio read 0`;
 
                 //If pin is low
@@ -69,6 +69,19 @@
             //Execute function on post
             if(array_key_exists('test',$_POST)){
                 toggler();
+            }
+
+            //Read value from gpio.2 pin
+            $output = `gpio read 2`;
+
+            //If pin is low
+            if (($output = `gpio read 2`) == 0){
+                echo "<br>Switch is LOW!<br>";
+            }
+
+            //If pin is high
+            else if (($output = `gpio read 2`) == 1){
+                echo "<br>Switch is HIGH!<br>";
             }
         ?>
 
