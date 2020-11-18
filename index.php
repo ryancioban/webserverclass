@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
     $page = $_SERVER['PHP_SELF'];
-    $sec = "10";
+    $sec = "1000";
 ?>
 <html>
      <head>
