@@ -40,30 +40,40 @@
 
         <?php
         //define and set flag variable
-        $flag = 0;
+        $flag 0;
 
-        function toggleON() {
+        function toggler() {
+            if($flag == 0){
             $output= `gpio write gpio.0 1`;
             echo "<div>$output</div>";
             echo "<br>LED should toggle ON!<br>";
-        }
+            $flag = 1;
+            }
 
-        function toggleOFF() {
+            if ($flag == 1){
             $output= `gpio write gpio.0 0`;
             echo "<div>$output</div>";
             echo "<br>LED should toggle OFF!<br>";
+            $flag = 0;
+            }
+
         }
 
-        if(array_key_exists('test',$_POST) && $flag == 0){
-                toggleON();
-                $flag = 1;
+        /*function toggleOFF() {
+            $output= `gpio write gpio.0 0`;
+            echo "<div>$output</div>";
+            echo "<br>LED should toggle OFF!<br>";
+        }*/
+
+        if(array_key_exists('test',$_POST)){
+                toggler();
         }
 
-        else if(array_key_exists('test',$_POST) && $flag == 1){
+        /*else if(array_key_exists('test',$_POST) && $flag == 1){
             toggleOFF();
             $flag = 0;
         }
-
+        */
         ?>
 
      </body>
