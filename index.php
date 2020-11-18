@@ -34,10 +34,10 @@
             
         <div>Click <a href="midterm.php" target=" _blank">here</a> to test midterm.</div>
 
-        <button type="button" onclick="alert()">Test here!</button>
+        <button type="button" onclick="displayed()">Test here!</button>
 
         <?php
-        function alert() {
+        function displayed() {
         echo "<br>Test works!<br>";
         }
         ?>
