@@ -40,7 +40,7 @@
 
         <?php
         //define and set flag variable
-        $flag = 0;
+        $flag;
 
         function toggler() {
             if($flag == 0){
