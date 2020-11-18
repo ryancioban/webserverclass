@@ -42,7 +42,7 @@
 
         function toggler() {
             $output = `gpio read 0`;
-            //echo "<div>$output</div>";
+            echo "<div>$output</div>";
 
             //$output = `cat /sys/class/gpio/gpio17/value`;
             //echo "<div>$output</div>";
