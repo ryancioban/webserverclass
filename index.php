@@ -35,15 +35,22 @@
         <div>Click <a href="midterm.php" target=" _blank">here</a> to test midterm.</div>
 
         <form method="post">
-            <input type="submit" name="test" id="test" value="RUN"/><br/>
+            <input type="submit" name="test" id="test" value="Toggle LED"/><br/>
         </form>
 
         <?php
-        function displayed() {
-        echo "<br>Test works!<br>";
+        function toggleON() {
+            $output= `gpio write gpio.0 1`;
+            echo "<div>$output</div>";
+            echo "<br>LED should toggle ON!<br>";
         }
+
+        function toggleOFF() {
+            echo "<br>LED should toggle OFF!<br>";
+        }
+
         if(array_key_exists('test',$_POST)){
-            displayed();
+            toggleON();
         }
         ?>
 
