@@ -48,6 +48,7 @@
             echo "<div>$output</div>";
             echo "<br>LED should toggle ON!<br>";
             $flag = 1;
+            return;
             }
 
             else if ($flag == 1){
@@ -55,6 +56,7 @@
             echo "<div>$output</div>";
             echo "<br>LED should toggle OFF!<br>";
             $flag = 0;
+            return;
             }
 
         }
