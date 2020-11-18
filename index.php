@@ -34,6 +34,37 @@
             
         <div>Click <a href="midterm.php" target=" _blank">here</a> to test midterm.</div>
 
- 
+        <br>
+        <form method="post">
+            <input type="submit" name="test" id="test" value="Toggle LED"/><br/>
+        </form>
+
+        <?php
+            function toggler() {
+                //Read value of gpio pin
+                $output = `gpio read 0`;
+
+                //If pin is low
+                if (($output = `gpio read 0`) == 0){
+                    $output= `gpio write gpio.0 1`;
+                    echo "<div>$output</div>";
+                    echo "<br>LED should toggle ON!<br>";
+                }
+                
+                //If pin is high
+                else if (($output = `gpio read 0`) == 1){
+                    $output= `gpio write gpio.0 0`;
+                    echo "<div>$output</div>";
+                    echo "<br>LED should toggle OFF!<br>";
+                }
+
+            }
+
+            //Execute function on post
+            if(array_key_exists('test',$_POST)){
+                toggler();
+            }
+        ?>
+
      </body>
 </html>
