@@ -50,7 +50,7 @@
             $flag = 1;
             }
 
-            else if ($flag == 1){
+            else {
             $output= `gpio write gpio.0 0`;
             echo "<div>$output</div>";
             echo "<br>LED should toggle OFF!<br>";
