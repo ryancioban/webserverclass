@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-
+<?php
+    $page = $_SERVER['PHP_SELF'];
+    $sec = "3";
+?>
 <html>
      <head>
         <title>Drinking Time</title>
         <!--Change picture on index page by hovering over it with the mouse-->
         <script src="swap.js"></script>
-
+        <!--Auto-refresh page-->
+        <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
     </head>
     
     <body>
@@ -67,7 +71,18 @@
                 toggler();
             }
 
+            //Read value from gpio.2 pin
+            $output = `gpio read 2`;
 
+            //If pin is low
+            if (($output = `gpio read 2`) == 0){
+                echo "<br>Switch is LOW!<br>";
+            }
+
+            //If pin is high
+            else if (($output = `gpio read 2`) == 1){
+                echo "<br>Switch is HIGH!<br>";
+            }
         ?>
 
      </body>
