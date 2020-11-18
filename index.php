@@ -1,9 +1,15 @@
 <!DOCTYPE html>
+<?php
+    $page = $_SERVER['PHP_SELF'];
+    $sec = "10";
+?>
 <html>
      <head>
         <title>Drinking Time</title>
         <!--Change picture on index page by hovering over it with the mouse-->
         <script src="swap.js"></script>
+        <!--Auto-refresh page-->
+        <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
     </head>
     
     <body>
