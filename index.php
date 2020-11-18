@@ -40,18 +40,18 @@
 
         <?php
         //define and set flag variable
-        $flag;
+        $flag = 0;
 
         function toggler() {
             if($flag == 0){
-            $output= `gpio write gpio.0 0`;
+            $output= `gpio write gpio.0 1`;
             echo "<div>$output</div>";
             echo "<br>LED should toggle ON!<br>";
             $flag = 1;
             return;
             }
 
-            else if ($flag == 1){
+            if ($flag == 1){
             $output= `gpio write gpio.0 0`;
             echo "<div>$output</div>";
             echo "<br>LED should toggle OFF!<br>";
