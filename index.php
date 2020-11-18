@@ -39,17 +39,22 @@
         </form>
 
         <?php
-        //define and set flag variable
-        $flag;
 
         function toggler() {
-            if($flag == 0){
+            //if($flag == 0)
+            $output = `echo "0" > /sys/class/gpio/export`;
+            echo "<div>$output</div>";
+
+            $output = `cat /sys/class/gpio/gpio0/value`;
+            echo "<div>$output</div>";
+
+            if($output == 0){
             $output= `gpio write gpio.0 1`;
             echo "<div>$output</div>";
             echo "<br>LED should toggle ON!<br>";
             }
-
-            else if ($flag == 1){
+            
+            else if ($output == 1){
             $output= `gpio write gpio.0 0`;
             echo "<div>$output</div>";
             echo "<br>LED should toggle OFF!<br>";
@@ -57,20 +62,8 @@
 
         }
 
-        /*function toggleOFF() {
-            $output= `gpio write gpio.0 0`;
-            echo "<div>$output</div>";
-            echo "<br>LED should toggle OFF!<br>";
-        }*/
-
-        if(array_key_exists('test',$_POST) && $flag == 0){
+        if(array_key_exists('test',$_POST)){
             toggler();
-            $flag = 1;
-        }
-
-        else if(array_key_exists('test',$_POST) && $flag == 1){
-            toggleOFF();
-            $flag = 0;
         }
         
         ?>
