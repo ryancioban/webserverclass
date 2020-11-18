@@ -39,6 +39,9 @@
         </form>
 
         <?php
+        //define and set flag variable
+        $flag = 0;
+
         function toggleON() {
             $output= `gpio write gpio.0 1`;
             echo "<div>$output</div>";
@@ -46,11 +49,20 @@
         }
 
         function toggleOFF() {
+            $output= `gpio write gpio.0 0`;
+            echo "<div>$output</div>";
             echo "<br>LED should toggle OFF!<br>";
         }
 
         if(array_key_exists('test',$_POST)){
-            toggleON();
+            if($flag==0){
+                toggleON();
+                $flag = 1;
+            }
+            else if($flag==1){
+                toggleOFF();
+                $flag = 0;
+            }
         }
         ?>
 
