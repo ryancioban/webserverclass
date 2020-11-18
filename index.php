@@ -54,16 +54,16 @@
             echo "<br>LED should toggle OFF!<br>";
         }
 
-        if(array_key_exists('test',$_POST)){
-            if($flag==0){
+        if(array_key_exists('test',$_POST) && $flag == 0){
                 toggleON();
                 $flag = 1;
-            }
-            else if($flag==1){
-                toggleOFF();
-                $flag = 0;
-            }
         }
+
+        if(array_key_exists('test',$_POST) && $flag == 1){
+            toggleOFF();
+            $flag = 0;
+        }
+
         ?>
 
      </body>
