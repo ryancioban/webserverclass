@@ -42,10 +42,10 @@
 
         function toggler() {
             $output = `echo "17" > /sys/class/gpio/export`;
-            echo "<div>$output</div>";
+            //echo "<div>$output</div>";
 
             $output = `cat /sys/class/gpio/gpio17/value`;
-            echo "<div>$output</div>";
+            //echo "<div>$output</div>";
 
             if (($output = `cat /sys/class/gpio/gpio17/value`) == 0){
             $output= `gpio write gpio.0 1`;
