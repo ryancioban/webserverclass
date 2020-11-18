@@ -33,5 +33,12 @@
         you like to drink!</div>
             
         <div>Click <a href="midterm.php" target=" _blank">here</a> to test midterm.</div>
+
+        <button type="button" onclick="alert()">Test here!</button>
+
+        <?php
+        echo "Test works!<br>";
+        ?>
+
      </body>
 </html>
