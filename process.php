@@ -6,7 +6,6 @@
 
     <body>
         <?php
-            header('Location: https://www.google.com');
             //Define variables
             $servername = "localhost";
             $username = "ryan";
@@ -36,6 +35,9 @@
 
             //En of program
             mysqli_close($conn);
+            
+            //Redirect to page
+            header('Location: https://www.google.ca');
 
 
 
