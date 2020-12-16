@@ -75,7 +75,7 @@
 
             //If pin is high
             else if (($output = `gpio read 2`) == 1){
-                echo "<br>Switch is HIGHER<br>";
+                echo "<br>Switch is HIGH!<br>";
             }
         ?>
 
