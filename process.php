@@ -6,6 +6,7 @@
 
     <body>
         <?php
+            header('Location: https://www.google.com');
             //Define variables
             $servername = "localhost";
             $username = "ryan";
