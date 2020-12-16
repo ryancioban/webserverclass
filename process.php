@@ -7,7 +7,7 @@
     <body>
         <?php
             //Define variables
-            $servername = "locahost";
+            $servername = "localhost";
             $username = "ryan";
             $password = "password";
             $dbname = "pistore";
