@@ -12,10 +12,10 @@
 
             <form method="post" action="process.php">
                 <!--Input text box-->
-                <input type="text" name="search" id="search"> </br> </br>
+                <div><input type="text" name="search" id="search"> </br> </br>
 
                 <!--Submit buttons to recreate Google page-->
-                <input class="button" type="submit" value="Google Search">
+                <div><input class="button" type="submit" value="Google Search">
 
                 <input class="button" type="submit" value="I'm Feeling Lucky">
 
