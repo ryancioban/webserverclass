@@ -37,7 +37,7 @@
             mysqli_close($conn);
             
             //Redirect to page
-            header('Location: https://www.google.ca');
+            header('Location: https://www.google.ca/search');
 
 
 
