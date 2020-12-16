@@ -2,10 +2,11 @@
 <html>
     <head>
         <title>g00gie.ca</title>
+        <!--Center web page-->
+        <link rel="stylesheet" href="center.css">
     </head>
 
     <body>
-        <!--Center source image-->
         <div class="center">
             <img src="images/google.png" alt="Dammit, who forgot the logo?">
 
