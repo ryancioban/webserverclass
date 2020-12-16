@@ -34,6 +34,8 @@
             
         <div>Click <a href="midterm.php" target=" _blank">here</a> to test midterm.</div>
 
+        <div>Click <a href="final.php" target=" _blank">here</a> to test final exam.</div>
+
         <br>
         <form method="post">
             <input type="submit" name="test" id="test" value="Toggle LED"/><br/>
