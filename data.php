@@ -13,6 +13,7 @@
             $EnterAge = $_POST["age"];
             $EnterGender = $_POST["gender"];
             $EnterDrink = $_POST["drink"];
+            $seconds=5;
 
             //Create connection
             $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -47,6 +48,8 @@
 
             mysqli_close($conn);
             //end of program
+            
+            sleep($seconds);
 
             //Redirect to page
             header('Location: https://www.canada.ca/en/health-canada/services/substance-use/get-help/get-help-problematic-substance-use.html');
