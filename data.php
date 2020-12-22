@@ -6,6 +6,8 @@
 
     <body>
         <h1>Thank you for your submission!</h1>
+        <img src="images/friends.jpg" alt="I put my friends here :)" id="friends"/>
+        <br/><br/>
         <h2>Here's a list of your fellow drinkers:</h2>
         <br>
         <?php
@@ -57,5 +59,10 @@
             mysqli_close($conn);
             //end of program
         ?>
+        <br>
+        <form method="post" action="index.php">
+            <div>Click below to return to the main page.</div>
+            <input type="button" name="returner" id="returner" value="Return to main page."/><br/>
+        </form>
     </body>
 </html>
