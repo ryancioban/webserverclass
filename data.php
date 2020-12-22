@@ -3,7 +3,7 @@
     <head>
         <title>Quenched!</title>
     </head>
-    
+
     <body>
         <h1>Thank you for your submission!</h1>
         <h2>Here's a list of your fellow drinkers:</h2>
@@ -37,7 +37,8 @@
             if (mysqli_query($conn, $sql)) {
                 echo "New record created successfully. <br>";
             } else {
-                echo "Error: " .$sql . "<br>" . mysqli_error($conn);
+                //echo "Error: " .$sql . "<br>" . mysqli_error($conn);
+                echo "You didn't enter anything :(" "<br>";
             }
 
             //Select data and query
