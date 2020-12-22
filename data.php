@@ -48,9 +48,6 @@
 
             mysqli_close($conn);
             //end of program
-
-            //Redirect to page
-            //header('Location: https://www.canada.ca/en/health-canada/services/substance-use/get-help/get-help-problematic-substance-use.html');
         ?>
     </body>
 </html>
