@@ -1,9 +1,15 @@
 <!DOCTYPE html>
+<?php
+    $page = $_SERVER['PHP_SELF'];
+    $sec = "3";
+?>
 <html>
      <head>
         <title>Drinking Time</title>
         <!--Change picture on index page by hovering over it with the mouse-->
         <script src="swap.js"></script>
+        <!--Auto-refresh page-->
+        <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
     </head>
     
     <body>
@@ -31,10 +37,6 @@
 
         <div>Click <a href="forms.php" target=" _blank">here</a> to tell me about what
         you like to drink!</div>
-            
-        <div>Click <a href="midterm.php" target=" _blank">here</a> to test midterm.</div>
-
-        <div>Click <a href="final.php" target=" _blank">here</a> to test final exam.</div>
 
         <br>
         <form method="post">
