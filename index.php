@@ -43,7 +43,7 @@
 
         <br>
         <form method="post">
-            <input type="button" name="test" id="test" value="Toggle LED"/><br/>
+            <input type="submit" name="test" id="test" value="Toggle LED"/><br/>
         </form>
 
         <?php
