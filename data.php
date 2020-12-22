@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Quenched!</title>
+    </head>
+    
     <body>
         <h1>Thank you for your submission!</h1>
         <h2>Here's a list of your fellow drinkers:</h2>
