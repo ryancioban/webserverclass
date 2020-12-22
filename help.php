@@ -9,8 +9,7 @@
         <h2>Alcoholism is no joke.</h2>
         <br>
 
-        <img src="images/drinker.jpg" alt="Help me :(" 
-        width="462" height="259.2" id="alcoholic"/>
+        <img src="images/drinker.jpg" alt="Help me :(" id="alcoholic"/>
         <br/><br/>
 
         <div>If you have a problem with drinking, don't let it take over you.</div>
