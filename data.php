@@ -40,7 +40,8 @@
                 //echo "Error: " .$sql . "<br>" . mysqli_error($conn);
                 echo "You didn't enter anything :(";
             }
-
+            
+            <br>
             //Select data and query
             $sql = "SELECT * FROM drinkers";
             $result = mysqli_query($conn, $sql);
