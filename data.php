@@ -38,7 +38,7 @@
                 echo "New record created successfully. <br>";
             } else {
                 //echo "Error: " .$sql . "<br>" . mysqli_error($conn);
-                echo "You didn't enter anything :(" "<br>";
+                echo "You didn't enter anything :(";
             }
 
             //Select data and query
