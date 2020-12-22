@@ -38,7 +38,7 @@
         <div>Click <a href="forms.php" target=" _blank">here</a> to tell me about what
         you like to drink!</div>
         <br>
-        
+
         <div>Do you need <a href="help.php" target=" _blank">help</a> with your drinking?</div>
 
         <br>
