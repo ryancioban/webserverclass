@@ -39,8 +39,9 @@
             if (mysqli_query($conn, $sql)) {
                 echo "New record created successfully. <br>";
             } else {
+                //Echo SQL error
                 //echo "Error: " .$sql . "<br>" . mysqli_error($conn);
-                echo "You didn't enter something correctly! <br>";
+                echo "No entry made! <br>";
             }
 
             //Select data and query
