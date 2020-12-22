@@ -62,7 +62,7 @@
         <br>
         <form method="post" action="index.php">
             <div>Click below to return to the main page.</div>
-            <input type="button" name="returner" id="returner" value="Return to main page."/><br/>
+            <input type="submit" name="returner" id="returner" value="Return to main page"/><br/>
         </form>
     </body>
 </html>
