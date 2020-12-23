@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+    //Uncomment these lines for auto-refresh
     //$page = $_SERVER['PHP_SELF'];
     //$sec = "3";
 ?>
