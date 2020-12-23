@@ -22,7 +22,6 @@
             $EnterAge = $_POST["age"];
             $EnterGender = $_POST["gender"];
             $EnterDrink = $_POST["drink"];
-            $seconds=5;
 
             //Create connection
             $conn = mysqli_connect($servername, $username, $password, $dbname);
